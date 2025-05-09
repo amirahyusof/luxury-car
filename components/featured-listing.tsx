@@ -1,10 +1,9 @@
 "use client"
 
-import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Heart, Share2, Car, Clock, MapPin } from "lucide-react"
+import { Share2, Car, Clock, MapPin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import "swiper/css";
@@ -141,16 +140,6 @@ const featuredListings = [
 ]
 
 export default function FeaturedListings() {
-  const [currentImageIndex, setCurrentImageIndex] = useState<Record<number, number>>({})
-  const [favorites, setFavorites] = useState<Record<number, boolean>>({})
-
-  const toggleFavorite = (id: number) => {
-    setFavorites((prev) => ({
-      ...prev,
-      [id]: !prev[id],
-    }))
-  }
-
   return (
     <section className="py-8">
       <div className="flex justify-between items-center mb-6">
@@ -172,7 +161,7 @@ export default function FeaturedListings() {
               <Card key={listing.id} className="relative group container overflow-hidden rounded-lg shadow-md hover:shadow-xl hover:scale-[1.01] transition-shadow duration-300">
                 <div className="relative">
                   <Image
-                    src={listing.gallery[currentImageIndex[listing.id] || 0]}
+                    src={listing.gallery[listing.id] ? listing.gallery[listing.id] : listing.image}
                     alt={listing.title}
                     width={150}
                     height={150}
@@ -186,9 +175,6 @@ export default function FeaturedListings() {
                   </div>
 
                   <div className="absolute top-2 right-2 flex gap-2">
-                    <Button variant="ghost" size="icon" className="bg-white/80 hover:bg-white text-black">
-                      <Heart className="h-4 w-4" />
-                    </Button>
                     <Button variant="ghost" size="icon" className="bg-white/80 hover:bg-white text-black">
                       <Share2 className="h-4 w-4" />
                     </Button>

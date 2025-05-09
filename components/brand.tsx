@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import Image from 'next/image';
 
 
 
@@ -42,9 +43,11 @@ export default function BrandsSection() {
         >
           {brands.map((logo, idx) => (
             <SwiperSlide key={idx}>
-              <img
+              <Image
                 src={logo}
                 alt={`Brand ${idx}`}
+                width={200}
+                height={100}
                 className="mx-auto grayscale hover:grayscale-0 transition duration-300 h-36 object-contain"
               />
             </SwiperSlide>

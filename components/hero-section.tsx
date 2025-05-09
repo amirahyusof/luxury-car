@@ -30,7 +30,7 @@ export default function HeroSection() {
             Find Your Dream <span className="text-zinc-600 font-serif">Luxury Car</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-300">
-          Malaysia's premier marketplace for exotic and luxury vehicles. 
+          Malaysia`&apos;`s premier marketplace for exotic and luxury vehicles. 
           <br/>Discover, buy, and sell with confidence.
           </p>
 

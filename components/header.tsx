@@ -9,7 +9,6 @@ import {
   SheetContent,
   SheetTitle, 
   SheetTrigger, 
-  SheetClose
 } from "@/components/ui/sheet"
 import { 
   DropdownMenu, 
@@ -17,7 +16,6 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from "@/components/ui/dropdown-menu"
-import Image from "next/image"
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)

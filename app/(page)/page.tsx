@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+// This is a server component
 import React from 'react';
 import Homepage from './homepage';
 
