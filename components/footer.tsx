@@ -11,7 +11,7 @@ export default function Footer() {
             <span className="text-xl font-bold text-white">LUXOTICARS</span>
           </Link>
           <p className="text-zinc-400 mb-4">
-            Malaysia`&apos;`s premier marketplace for luxury and exotic vehicles. Find your dream car or sell your premium
+            Malaysia&apos;s premier marketplace for luxury and exotic vehicles. Find your dream car or sell your premium
             vehicle with us.
           </p>
 

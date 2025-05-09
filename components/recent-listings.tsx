@@ -90,7 +90,7 @@ export default function RecentListings() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
         {recentListings.slice(0, 6).map((listing) => (
           <div className="flex justify-center" key={listing.id}>
             <Card

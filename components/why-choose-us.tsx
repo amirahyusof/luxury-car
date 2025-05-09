@@ -40,7 +40,7 @@ export default function WhyChooseUs() {
           Why Choose Luxoticars
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto text-lg">
-          Malaysia`&apos;`s premier marketplace dedicated exclusively to luxury and exotic vehicles
+          Malaysia&apos;s premier marketplace dedicated exclusively to luxury and exotic vehicles
         </p>
       </div>
 
