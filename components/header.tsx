@@ -2,10 +2,21 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Search, Menu, LogIn, PlusCircle } from "lucide-react"
+import { Search, Menu } from "lucide-react"
 import { useState } from "react"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { 
+  Sheet, 
+  SheetContent,
+  SheetTitle, 
+  SheetTrigger, 
+  SheetClose
+} from "@/components/ui/sheet"
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger 
+} from "@/components/ui/dropdown-menu"
 import Image from "next/image"
 
 export default function Header() {
@@ -121,21 +132,13 @@ export default function Header() {
               size="sm"
               className="hidden md:flex gap-2 border text-zinc-300 hover:text-white hover:bg-zinc-800"
             >
-              <LogIn className="h-4 w-4" />
               Login
-            </Button>
-          </Link>
-
-          <Link href="/post-ad">
-            <Button size="sm" className="hidden md:flex gap-2 bg-primary hover:bg-primary/90">
-              <PlusCircle className="h-4 w-4" />
-              Post Free Ad
             </Button>
           </Link>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button
+            <Button
                 variant="ghost"
                 size="icon"
                 className="md:hidden text-zinc-300 hover:text-white hover:bg-zinc-800"
@@ -144,16 +147,11 @@ export default function Header() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="pl-4 bg-zinc-900 border-zinc-800">
+
+            <SheetContent side="right" className="pl-4 bg-zinc-900 border-zinc-800">
+            <SheetTitle className="sr-only">Main Menu</SheetTitle>
               <div className="grid gap-4 py-4">
                 <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                  <Image
-                    src="/placeholder.svg?height=32&width=32"
-                    alt="Luxoticars Logo"
-                    width={32}
-                    height={32}
-                    className="invert"
-                  />
                   <span className="text-xl font-bold text-white">LUXOTICARS</span>
                 </Link>
 
@@ -202,17 +200,10 @@ export default function Header() {
                   </Link>
                 </div>
 
-                <div className="grid gap-2 mt-4">
+                <div className="mt-4 p-4">
                   <Link href="/auth/login" onClick={() => setIsOpen(false)}>
                     <Button variant="outline" className="w-full border-zinc-700 hover:bg-zinc-800 hover:text-white">
-                      <LogIn className="h-4 w-4 mr-2" />
                       Login
-                    </Button>
-                  </Link>
-                  <Link href="/post-ad" onClick={() => setIsOpen(false)}>
-                    <Button className="w-full bg-primary hover:bg-primary/90">
-                      <PlusCircle className="h-4 w-4 mr-2" />
-                      Post Free Ad
                     </Button>
                   </Link>
                 </div>

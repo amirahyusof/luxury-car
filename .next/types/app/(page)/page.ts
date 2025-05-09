@@ -1,4 +1,4 @@
-// File: C:\Users\MyPc\website-clone\app\(page)\page.tsx
+// File: C:\Users\MyPc\OneDrive\Desktop\Next.js\homepage\app\(page)\page.tsx
 import * as entry from '../../../../app/(page)/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

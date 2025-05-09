@@ -84,7 +84,7 @@ export default function RecentListings() {
   return (
     <section className="py-16 bg-dark">
       <div className="flex justify-between items-center mb-8">
-        <h2 className="text-3xl font-bold">🚗 Recent Listings</h2>
+        <h2 className="text-3xl font-bold">Recent Listings</h2>
         <Link href="/listings" className="text-secondary hover:underline text-sm font-medium">
           View All Listings
         </Link>
@@ -92,74 +92,76 @@ export default function RecentListings() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {recentListings.slice(0, 6).map((listing) => (
-          <Card
-            key={listing.id}
-            className="overflow-hidden group border max-w-sm md:w-full transition-all duration-300 hover:shadow-xl hover:scale-[1.01]"
-          >
-            <div className="relative">
-              <Image
-                src={listing.image}
-                alt={listing.title}
-                width={400}
-                height={300}
-                className="w-full h-48 object-cover transition-transform group-hover:scale-105"
-              />
-              <div className="absolute top-2 left-2 flex gap-2">
-                {listing.featured && (
-                  <Badge variant="secondary" className="bg-primary text-primary-foreground">
-                    Featured
-                  </Badge>
-                )}
-                {listing.verified && (
-                  <Badge variant="outline" className="bg-white text-black">
-                    Verified
-                  </Badge>
-                )}
-              </div>
-              <div className="absolute top-2 right-2 flex gap-2">
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full bg-white/90 hover:bg-white">
-                  <Heart className="h-4 w-4" />
-                  <span className="sr-only">Add to favorites</span>
-                </Button>
-                <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full bg-white/90 hover:bg-white">
-                  <Share2 className="h-4 w-4" />
-                  <span className="sr-only">Share</span>
-                </Button>
-              </div>
-            </div>
-
-            <CardContent className="p-5 space-y-3">
-              <div>
-                <h3 className="text-lg font-semibold truncate">
-                  <Link href={`/listing/${listing.id}`} className="hover:text-primary">
-                    {listing.title}
-                  </Link>
-                </h3>
-                <p className="text-xl font-bold text-primary">{listing.price}</p>
-                <p className="text-sm text-muted-foreground">{listing.location}</p>
+          <div className="flex justify-center" key={listing.id}>
+            <Card
+              className="overflow-hidden group border max-w-sm md:w-full transition-all duration-300 hover:shadow-xl hover:scale-[1.01]"
+            >
+              <div className="relative">
+                <Image
+                  src={listing.image}
+                  alt={listing.title}
+                  width={400}
+                  height={300}
+                  className="w-full h-36 object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute top-2 left-2 flex gap-2">
+                  {listing.featured && (
+                    <Badge variant="secondary" className="bg-primary text-primary-foreground">
+                      Featured
+                    </Badge>
+                  )}
+                  {listing.verified && (
+                    <Badge variant="outline" className="bg-white text-black">
+                      Verified
+                    </Badge>
+                  )}
+                </div>
+                <div className="absolute top-2 right-2 flex gap-2">
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full bg-white/90 hover:bg-white">
+                    <Heart className="h-4 w-4" />
+                    <span className="sr-only">Add to favorites</span>
+                  </Button>
+                  <Button variant="ghost" size="icon" className="h-8 w-8 rounded-full bg-white/90 hover:bg-white">
+                    <Share2 className="h-4 w-4" />
+                    <span className="sr-only">Share</span>
+                  </Button>
+                </div>
               </div>
 
-              <div className="text-sm text-muted-foreground space-y-1">
-                <p>Year: {listing.year}</p>
-                <p>Mileage: {listing.mileage}</p>
-                <p>Transmission: {listing.transmission}</p>
-              </div>
+              <CardContent className="p-5 space-y-3">
+                <div>
+                  <h3 className="text-lg font-semibold truncate">
+                    <Link href={`/listing/${listing.id}`} className="hover:text-primary">
+                      {listing.title}
+                    </Link>
+                  </h3>
+                  <p className="text-xl font-semibold text-blue-600">{listing.price}</p>
+                  <p className="text-sm text-muted-foreground">{listing.location}</p>
+                </div>
 
-              <div className="pt-4 flex gap-2">
-                <Button variant="outline" size="sm" className="flex-1">
-                  Contact Seller
-                </Button>
-                <Button size="sm" className="flex-1">
-                  View Details
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+                <div className="text-sm text-muted-foreground space-y-1">
+                  <p>Year: {listing.year}</p>
+                  <p>Mileage: {listing.mileage}</p>
+                  <p>Transmission: {listing.transmission}</p>
+                </div>
+
+                <div className="pt-4 flex gap-2">
+                  <Button variant="outline" size="sm" className="flex-1">
+                    Contact Seller
+                  </Button>
+                  <Button size="sm" className="flex-1">
+                    View Details
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          
         ))}
       </div>
 
       <div className="mt-10 text-center">
-        <Button asChild size="lg">
+        <Button asChild size="lg" className="hover:bg-zinc-800 hover:text-white">
           <Link href="/listings">View All Listings</Link>
         </Button>
       </div>
