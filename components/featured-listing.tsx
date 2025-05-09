@@ -158,14 +158,14 @@ export default function FeaturedListings() {
         {featuredListings.map((listing, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 pl-4 pr-2">
             <div className="p-1">
-              <Card key={listing.id} className="relative group container overflow-hidden rounded-lg shadow-md hover:shadow-xl hover:scale-[1.01] transition-shadow duration-300">
+              <Card key={listing.id} className="relative group container overflow-hidden rounded-lg shadow-md hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
                 <div className="relative">
                   <Image
                     src={listing.gallery[listing.id] ? listing.gallery[listing.id] : listing.image}
                     alt={listing.title}
                     width={150}
                     height={150}
-                    className="w-full h-36 object-cover"
+                    className="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
 
                   <div className="absolute top-2 left-2 flex flex-col gap-1">
@@ -179,8 +179,6 @@ export default function FeaturedListings() {
                       <Share2 className="h-4 w-4" />
                     </Button>
                   </div>
-
-                  <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition duration-300"></div>
                 </div>
 
                 <CardContent className="p-4 space-y-2">

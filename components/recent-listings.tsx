@@ -145,7 +145,7 @@ export default function RecentListings() {
                   <p>Transmission: {listing.transmission}</p>
                 </div>
 
-                <div className="pt-4 flex gap-2">
+                <div className="pt-4 flex flex-row md:flex-col gap-2">
                   <Button variant="outline" size="sm" className="flex-1">
                     Contact Seller
                   </Button>
