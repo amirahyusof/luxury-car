@@ -102,7 +102,7 @@ export default function RecentListings() {
                   alt={listing.title}
                   width={400}
                   height={300}
-                  className="w-full h-36 object-cover transition-transform group-hover:scale-105"
+                  className="w-full h-36 object-cover"
                 />
                 <div className="absolute top-2 left-2 flex gap-2">
                   {listing.featured && (
