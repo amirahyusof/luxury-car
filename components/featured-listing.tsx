@@ -153,11 +153,11 @@ export default function FeaturedListings() {
       </div>
 
 
-      <Carousel className="relative w-full">
+      <Carousel className="relative w-full ">
         <CarouselContent className="-ml-4">
         {featuredListings.map((listing, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4 pl-4 pr-2">
-            <div className="p-1">
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
+            <div className="">
               <Card key={listing.id} className="relative group container overflow-hidden rounded-lg shadow-md hover:shadow-xl hover:scale-[1.01] transition-all duration-300">
                 <div className="relative">
                   <Image
@@ -200,7 +200,6 @@ export default function FeaturedListings() {
                       </Link>
                     </Button>
                   </div>
-                  
                 </CardContent>
               </Card>
             </div>
@@ -209,10 +208,10 @@ export default function FeaturedListings() {
 
         </CarouselContent>
         <CarouselPrevious
-          className="absolute -left-1.5 sm:left-2 md:-left-10 top-1/2 -translate-y-1/2 z-10 bg-white text-black p-1 sm:p-2 rounded-full shadow-md"
+          className="absolute -left-1.5 sm:-left-5 md:-left-6 lg:-left-4 top-1/2 -translate-y-1/2 z-10 bg-white text-black p-1 sm:p-2 rounded-full shadow-md"
          />
         <CarouselNext 
-           className="absolute -right-1 sm:right-2 md:-right-10 top-1/2 -translate-y-1/2 z-10 bg-white text-black p-1 sm:p-2 rounded-full shadow-md"
+           className="absolute -right-1.5 sm:-right-5 md:-right-6 lg:-right-4 top-1/2 -translate-y-1/2 z-10 bg-white text-black p-1 sm:p-2 rounded-full shadow-md"
         />
       </Carousel>
     </section>
