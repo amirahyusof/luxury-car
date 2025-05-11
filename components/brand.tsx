@@ -4,8 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import Image from 'next/image';
-import { link } from 'fs';
-import { Card } from './ui/card';
 import Link from 'next/link';
 
 const brandSearch = [
