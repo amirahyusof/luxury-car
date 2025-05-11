@@ -59,18 +59,6 @@ const brandSearch = [
 ]
 
 
-
-const brands = [
-  '/brands/porsche.png',
-  '/brands/audi.png',
-  '/brands/bentley.png',
-  '/brands/ferrari.png',
-  '/brands/lamborghini.png',
-  '/brands/landrover.png',
-  '/brands/mercedes.png',
-  '/brands/toyota.png',
-];
-
 export default function BrandsSection() {
   return (
     <section className="bg-default text-white py-16 px-4">
