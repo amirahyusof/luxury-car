@@ -84,14 +84,14 @@ export default function BrandsSection() {
         >
           {brandSearch.map((logo, idx) => (
             <SwiperSlide key={idx}>
-              <div className="border-2 border-blue-800 bg-zinc-600 rounded-lg shadow h-36 w-full hover:shadow-none hover:scale-105 transition duration-300">
+              <div className="border-2 border-blue-800 bg-zinc-600 rounded-lg shadow h-16 sm:h-32 md:h-36 w-full hover:shadow-none hover:scale-105 transition duration-300">
                 <Link href={`/brandsearch/${logo.link}`} className="flex items-center justify-center h-full">
                   <Image
                     src={logo.image}
                     alt={`Brand ${idx}`}
                     width={200}
                     height={100}
-                    className="mx-auto grayscale hover:grayscale-0 transition duration-300 h-28 object-contain"
+                    className="mx-auto grayscale hover:grayscale-0 transition duration-300 h-20 sm:h-28 object-contain"
                   />
                 </Link>
               </div>

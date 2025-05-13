@@ -1,12 +1,18 @@
 import Link from "next/link"
-import { Car, Compass, Clock, Award, DollarSign, ShieldCheck } from "lucide-react"
+import { 
+  Car, 
+  Award, 
+  ShieldCheck, 
+  Bike, 
+  Cable 
+} from "lucide-react"
 
 const categories = [
-  { icon: <Car className="h-8 w-8" />, name: "Sports Cars", href: "/category/sports" },
-  { icon: <Compass className="h-8 w-8" />, name: "Classic Cars", href: "/category/classic" },
-  { icon: <Clock className="h-8 w-8" />, name: "New Arrivals", href: "/new-arrivals", badge: "NEW" },
-  { icon: <Award className="h-8 w-8" />, name: "Premium Brands", href: "/brands" },
-  { icon: <DollarSign className="h-8 w-8" />, name: "Sell Your Car", href: "/sell" },
+  { icon: <Car className="h-8 w-8" />, name: "Recond Cars", href: "/category/recond" },
+  { icon: <Car className="h-8 w-8" />, name: "Used Cars", href: "/category/used" },
+  { icon: <Bike className="h-8 w-8" />, name: "Bikes", href: "/bike" },
+  { icon: <Award className="h-8 w-8" />, name: "Number Plate", href: "/numberplate" },
+  { icon: <Cable className="h-8 w-8" />, name: "Accessories", href: "/accessories", badge: "New" },
   { icon: <ShieldCheck className="h-8 w-8" />, name: "Verified Dealers", href: "/dealers" },
 ]
 
