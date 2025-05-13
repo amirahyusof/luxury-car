@@ -1,15 +1,19 @@
 import React from 'react';
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from "next/font/google"
+import { Inter, Nunito } from "next/font/google"
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({
+const inter = Inter({ 
+  subsets: ["latin"], 
+  variable: "--font-inter" 
+});
+
+const nunito = Nunito({
   subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["500", "700"],
+  variable: "--font-nunito",
+  weight: ["400", "500", "600"], 
 })
 
 
@@ -24,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${nunito.variable}`}>
       <body className="font-sans">
         <div>
           <Header />

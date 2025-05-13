@@ -17,7 +17,7 @@ export default function HeroSection() {
   return (
     <div className="relative rounded-xl overflow-hidden h-[550px]">
       <Image
-        src="/placeholder.svg?height=600&width=1200"
+        src="/images/background-image.webp"
         alt="Luxury cars showcase"
         fill
         className="object-cover w-full h-full"
@@ -27,7 +27,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-white px-4">
         <div className="text-center max-w-3xl space-y-6">
           <h1 className="text-5xl md:text-6xl font-bold leading-tight font-sans">
-            Find Your Dream <span className="text-zinc-600 font-serif">Luxury Car</span>
+            Find Your Dream <span className="text-white/90 font-sans"><br></br>Luxury Car</span>
           </h1>
           <p className="text-lg md:text-xl text-zinc-300">
           Malaysia&apos;s premier marketplace for exotic and luxury vehicles. 
@@ -52,10 +52,10 @@ export default function HeroSection() {
           </form>
 
           <div className="flex gap-4 mt-6 justify-center flex-wrap">
-            <Button variant="outline" className="bg-white/10 hover:bg-white/20 text-white">
+            <Button variant="outline" className="cursor-pointer bg-white/10 hover:bg-white/20 text-white">
               Browse All Cars
             </Button>
-            <Button variant="secondary" className="bg-primary hover:bg-primary/90 text-white">
+            <Button variant="secondary" className="cursor-pointer bg-primary hover:bg-zinc-800 text-white">
               Sell Your Car
             </Button>
           </div>
