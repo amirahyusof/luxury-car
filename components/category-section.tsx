@@ -13,7 +13,7 @@ const categories = [
   { icon: <Bike className="h-8 w-8" />, name: "Bikes", href: "/bike" },
   { icon: <Award className="h-8 w-8" />, name: "Number Plate", href: "/numberplate" },
   { icon: <Cable className="h-8 w-8" />, name: "Accessories", href: "/accessories", badge: "New" },
-  { icon: <ShieldCheck className="h-8 w-8" />, name: "Verified Dealers", href: "/dealers" },
+  { icon: <ShieldCheck className="h-8 w-8" />, name: "Merchandise", href: "/merchandise" },
 ]
 
 export default function CategorySection() {

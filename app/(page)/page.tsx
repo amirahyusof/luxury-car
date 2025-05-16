@@ -1,6 +1,6 @@
 // This is a server component
 import React from 'react';
-import Homepage from './homepage';
+import Homepage from './homepage/page';
 
 export default function Page() {
   return (
